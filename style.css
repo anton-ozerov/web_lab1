@@ -35,8 +35,9 @@ header {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 16px;
 }
 
 .product-card {
@@ -57,13 +58,16 @@ header {
 }
 
 .product-card img {
+    display: block;
     max-width: 60%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px; /* центр по горизонтали */
+    align-self: center;
 }
 
 .product-price {
+    margin-top: auto;
     font-size: 18px;
     font-weight: bold;
     color: rgb(68, 68, 68);
@@ -222,6 +226,12 @@ button:hover {
     }
 }
 
+@media (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Планшет */
 @media (max-width: 900px) {
     header {
@@ -234,7 +244,7 @@ button:hover {
     }
 
     .products {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .product-card {
@@ -260,8 +270,9 @@ button:hover {
     }
 
     .products {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 8px;
     }
 
     .product-card {
@@ -296,5 +307,11 @@ button:hover {
     .btn-submit {
         font-size: 16px;
         padding: 12px;
+    }
+}
+
+@media (max-width: 340px) {
+    .products {
+        grid-template-columns: 1fr;
     }
 }
