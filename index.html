@@ -8,6 +8,7 @@
 <body>
     <header>
         <h1>Онлайн-Магазин</h1>
+        <button id="open-cart">Корзина</button>
     </header>
 
     <main>
@@ -16,13 +17,46 @@
                 <img>
                 <h2>AirPods Pro 2</h2>
                 <p class="product-price">18 990 <span>₽</span></p>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
             <article class="product-card">
                 <img>
                 <h2>AirPods 4</h2>
                 <p class="product-price">11 990 <span>₽</span></p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </article>
+            <article class="product-card">
+                <img>
+                <h2>iPhone 15 Pro Max</h2>
+                <p class="product-price">188 990 <span>₽</span></p>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </article>
+            <article class="product-card">
+                <img>
+                <h2>iPhone 15 Pro</h2>
+                <p class="product-price">110 990 <span>₽</span></p>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
         </section>
     </main>
+
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3>Корзина</h3>
+                <span class="close-btn" id="close">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <ul id="cart-items"></ul>
+                <p>К оплате: <span id="cart-total-sum">0</span> руб.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-get-order" id="checkout">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
