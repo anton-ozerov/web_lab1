@@ -8,33 +8,33 @@
 <body>
     <header>
         <h1>Онлайн-Магазин</h1>
-        <button id="open-cart">Корзина</button>
+        <button id="cart-btn" class="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
     </header>
 
     <main>
         <section class="products">
             <article class="product-card">
-                <img>
+                <img src="https://images.biggeek.ru/1/870/a242/22739-99718518-503Airpodspro2@2x.png" alt onerror="this.src='//cdn.diginetica.net/images/noimage.png';">
                 <h2>AirPods Pro 2</h2>
-                <p class="product-price">18 990 <span>₽</span></p>
+                <p class="product-price">18990 <span>₽</span></p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </article>
             <article class="product-card">
-                <img>
+                <img src="https://images.biggeek.ru/1/870/3f4b/28405-907airpods-4-hero-select-202409@2x.jpg" alt onerror="this.src='//cdn.diginetica.net/images/noimage.png';">
                 <h2>AirPods 4</h2>
-                <p class="product-price">11 990 <span>₽</span></p>
+                <p class="product-price">11990 <span>₽</span></p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </article>
             <article class="product-card">
-                <img>
+                <img src="https://images.biggeek.ru/1/870/e97a/22698-93t_natural@2x.jpg" alt onerror="this.src='//cdn.diginetica.net/images/noimage.png';">
                 <h2>iPhone 15 Pro Max</h2>
-                <p class="product-price">188 990 <span>₽</span></p>
+                <p class="product-price">188990 <span>₽</span></p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </article>
             <article class="product-card">
-                <img>
+                <img src="https://images.biggeek.ru/1/870/7156/22664-866Pink@2x.jpg" alt onerror="this.src='//cdn.diginetica.net/images/noimage.png';">
                 <h2>iPhone 15 Pro</h2>
-                <p class="product-price">110 990 <span>₽</span></p>
+                <p class="product-price">110990 <span>₽</span></p>
                 <button class="add-to-cart">Добавить в корзину</button>
             </article>
         </section>
@@ -44,7 +44,7 @@
         <div class="modal-window">
             <div class="modal-header">
                 <h3>Корзина</h3>
-                <span class="close-btn" id="close">&times;</span>
+                <span class="close-btn">&times;</span>
             </div>
 
             <div class="modal-content">
@@ -58,5 +58,25 @@
         </div>
     </div>
 
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3>Оформление заказа</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+
+            <div class="modal-content">
+                <form id="order-form">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="text" name="surname" placeholder="Фамилия" required>
+                    <input type="text" name="address" placeholder="Адрес доставки" required>
+                    <input type="tel" name="phone" placeholder="Номер телефона" required>
+                    <button type="submit">Создать заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
