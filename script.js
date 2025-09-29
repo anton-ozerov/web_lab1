@@ -15,6 +15,7 @@ const add_to_cart_btns = document.querySelectorAll(".add-to-cart");
 function save_cart() {
     localStorage.setItem("cart", JSON.stringify(cart));
     render_cart();
+    console.log('Ответ из виджета:');
 }
 
 function render_cart() {
